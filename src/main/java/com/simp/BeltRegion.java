@@ -1,4 +1,4 @@
-package main.java.com.simp;
+package com.simp;
 
 import com.terraformersmc.terrablender.api.Region;
 import com.terraformersmc.terrablender.api.RegionType;

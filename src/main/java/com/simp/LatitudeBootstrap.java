@@ -1,4 +1,4 @@
-package main.java.com.simp;
+package com.simp;
 
 import net.minecraft.world.level.levelgen.DensityFunction;
 import net.minecraft.world.level.levelgen.DensityFunctions;
@@ -23,11 +23,16 @@ public class LatitudeBootstrap {
 
         ctx.register(KEY, saw);
     }
+    public static void bootstrapDirect() {
+    Registry.register(
+        Registries.DENSITY_FUNCTION,
+        KEY,
+        new SawFunction(
+            DensityFunctions.mul(
+                DensityFunctions.constant(1.0 / ConfigManager.CONFIG.beltHeight),
+                DensityFunctions.coordinate(DensityFunctions.Coordinate.Z)
+            )
+        )
+    );
 }
-
-public class SIMPSCBGDataGen implements DataGeneratorEntrypoint {
-    @Override
-    public void onInitializeDataGenerator(FabricDataGenerator generator) {
-        generator.createPack().addProvider(LatitudeDensityFunctionProvider::new);
-    }
 }

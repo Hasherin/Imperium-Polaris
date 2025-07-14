@@ -6,6 +6,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.biome.Biome;
 import com.terraformersmc.terrablender.api.TerraBlenderApi;
+
+import main.java.com.simp.BeltRegion;
+import main.java.com.simp.ConfigManager;
+import main.java.com.simp.LatitudeBootstrap;
+
 import com.terraformersmc.terrablender.api.Region;
 
 import org.slf4j.Logger;
@@ -25,6 +30,8 @@ public class SIMPSCBG implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ConfigManager.init();
+		LatitudeBootstrap.bootstrapDirect();
+		
         TerraBlenderApi.onTerraBlenderInitialized(() ->
             Region.register(new BeltRegion())
         );
