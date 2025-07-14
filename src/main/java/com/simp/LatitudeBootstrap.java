@@ -24,3 +24,10 @@ public class LatitudeBootstrap {
         ctx.register(KEY, saw);
     }
 }
+
+public class SIMPSCBGDataGen implements DataGeneratorEntrypoint {
+    @Override
+    public void onInitializeDataGenerator(FabricDataGenerator generator) {
+        generator.createPack().addProvider(LatitudeDensityFunctionProvider::new);
+    }
+}
