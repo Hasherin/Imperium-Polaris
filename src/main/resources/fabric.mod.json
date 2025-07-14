@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"com.simp.SIMPSCBGClient"
+		],
+		"terrablender": [
+			"com.simp.SimpscbgTerrablender"
 		]
 	},
 	"mixins": [

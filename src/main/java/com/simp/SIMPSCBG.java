@@ -32,9 +32,6 @@ public class SIMPSCBG implements ModInitializer {
 		ConfigManager.init();
 		LatitudeBootstrap.bootstrapDirect();
 		
-        TerraBlenderApi.onTerraBlenderInitialized(() ->
-            Region.register(new BeltRegion())
-        );
 		LOGGER.info("Hello Fabric world!");
 	}
 
