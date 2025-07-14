@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "simpscbg",
+	"version": "${version}",
+	"name": "SIMPSCBG",
+	"description": "Climate based generator intended for the SMP Imperium server.",
+	"authors": [
+		"Hasherin"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/simpscbg/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.simp.SIMPSCBG"
+		],
+		"client": [
+			"com.simp.SIMPSCBGClient"
+		]
+	},
+	"mixins": [
+		"simpscbg.mixins.json",
+		{
+			"config": "simpscbg.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.7",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
