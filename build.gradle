@@ -1,12 +1,12 @@
 plugins {
-    id 'fabric-loom' version '1.4-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
     id 'idea'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
-archivesBaseName = "Test-fabric"
+archivesBaseName = "SICBBG"
 
 repositories {
     maven { url = 'https://maven.minecraftforge.net/' }

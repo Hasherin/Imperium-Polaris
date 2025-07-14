@@ -1,29 +1,28 @@
 {
-    "schemaVersion": 1,
-    "id": "sicbbg",
-    "version": "${mod-version}",
-    "name": "SICBBG",
-    "description": "Climate based generator intended for the SMP Imperium server.",
-    "authors": [
-      "Hasherin"
+  "schemaVersion": 1,
+  "id": "sicbbg",
+  "version": "${mod_version}",
+  "name": "SICBBG",
+  "description": "Climate based generator intended for the SMP Imperium server.",
+  "authors": [
+    "Hasherin"
+  ],
+  "license": "LGPLv3",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.sicbbg.SicbbgMod"
     ],
-    "license": "LGPLv3",
-    "environment": "*",
-    "entrypoints": {
-      "main": [
-        "com.sicbbg"
-      ],
-      "terrablender": [
-        "com.sicbbg"
-      ]
-    },
-    "mixins": [],
-    "depends": {
-      "fabricloader": "*",
-      "fabric": "*",
-      "minecraft": ">=${minecraft-version}",
-      "java": ">=17",
-      "terrablender": "${terrablender-version}"
-    }
+    "terrablender": [
+      "com.sicbbg.SicbbgRegion"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric": ">=${fabric_version}",
+    "minecraft": ">=${minecraft_version}",
+    "java": ">=17",
+    "terrablender": ">=${terrablender_version}"
   }
-  
+}
