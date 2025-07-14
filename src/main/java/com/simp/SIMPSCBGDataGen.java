@@ -1,4 +1,4 @@
-package com.simp;
+package main.java.com.simp;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;

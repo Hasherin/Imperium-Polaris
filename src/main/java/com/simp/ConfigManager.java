@@ -1,4 +1,4 @@
-package com.simp;
+package main.java.com.simp;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

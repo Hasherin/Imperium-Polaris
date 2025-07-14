@@ -1,4 +1,4 @@
-package com.simp;
+package main.java.com.simp;
 
 import net.minecraft.world.level.levelgen.DensityFunction;
 import net.minecraft.world.level.levelgen.DensityFunctions;
