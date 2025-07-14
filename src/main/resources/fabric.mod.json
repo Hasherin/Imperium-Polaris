@@ -1,29 +1,29 @@
 {
     "schemaVersion": 1,
-    "id": "test",
-    "version": "1.0.0",
-    "name": "Test",
-    "description": "A simple test mod for TerraBlender.",
+    "id": "sicbbg",
+    "version": "${mod-version}",
+    "name": "SICBBG",
+    "description": "Climate based generator intended for the SMP Imperium server.",
     "authors": [
-      "Adubbz"
+      "Hasherin"
     ],
     "license": "LGPLv3",
     "environment": "*",
     "entrypoints": {
       "main": [
-        "com.sicbbg.TestMod"
+        "com.sicbbg"
       ],
       "terrablender": [
-        "com.sicbbg.TestMod"
+        "com.sicbbg"
       ]
     },
     "mixins": [],
     "depends": {
       "fabricloader": "*",
       "fabric": "*",
-      "minecraft": "1.20.x",
+      "minecraft": ">=${minecraft-version}",
       "java": ">=17",
-      "terrablender": "*"
+      "terrablender": "${terrablender-version}"
     }
   }
   
