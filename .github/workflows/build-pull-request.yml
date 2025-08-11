@@ -16,6 +16,9 @@ jobs:
           distribution: temurin
           java-version: 21
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -27,5 +30,5 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: sodium-artifacts-${{ steps.ref.outputs.branch }}
-          path: build/mods/*.jar
+          name: sodium-artifacts-${{ github.head_ref }}
+          path: build/libs/*.jar
