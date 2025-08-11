@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "simpscbg",
+	"version": "${version}",
+	"name": "SMP Imperium Climate Based Generation",
+	"description": "This is a semi-configurable climate based biome generation mod intended for the SMP Imperium server.",
+	"authors": ["Hasherin"],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Hasherin/SIMPSCBG"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/simpscbg/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["io.github.hasherin.simpscbg.CBGMod"]
+	},
+	"mixins": ["simpscbg.mixins.json"],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": ">=0.116.5+1.21.1"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
