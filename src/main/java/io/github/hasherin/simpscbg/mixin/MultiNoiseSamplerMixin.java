@@ -1,4 +1,4 @@
-package io.github.trashoflevillage.climatic.mixin;
+package io.github.hasherin.simpscbg.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import net.minecraft.world.biome.source.BiomeCoords;
@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import io.github.trashoflevillage.climatic.ClimaticMod;
+import io.github.hasherin.simpscbg.CBGMod;
 
 @Mixin(MultiNoiseUtil.MultiNoiseSampler.class)
 public class MultiNoiseSamplerMixin {
@@ -30,7 +30,7 @@ public class MultiNoiseSamplerMixin {
         float originalTemp = (float)this.temperature.sample(unblendedNoisePos);
 
         // How gradually the temperature changes in the north/south directions.
-        float deltaTemp = (ClimaticMod.CONFIG != null ? ClimaticMod.CONFIG.deltaTemp : 1000f);
+        float deltaTemp = (CBGMod.CONFIG != null ? CBGMod.CONFIG.deltaTemp : 1000f);
 
         //float tempMod = (float)(2 * (1/(1+Math.pow(Math.E, (-z / deltaTemp)))));
         float tempMod = z / deltaTemp;
