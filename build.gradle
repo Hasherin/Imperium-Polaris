@@ -3,6 +3,12 @@ plugins {
 	id 'maven-publish'
 }
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
 version = project.mod_version
 group = project.maven_group
 
@@ -11,12 +17,11 @@ base {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
+    maven { url = "https://jitpack.io" }
 }
+
 
 dependencies {
 	// To change the versions see the gradle.properties file
@@ -26,6 +31,11 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Mixin Extras (needed for your mixins to compile)
+    modImplementation "com.github.LlamaLad7:MixinExtras:0.3.5"
+    include "com.github.LlamaLad7:MixinExtras:0.3.5"
+    annotationProcessor "com.github.LlamaLad7:MixinExtras:0.3.5"
 	
 }
 
@@ -60,9 +70,9 @@ jar {
 // configure the maven publication
 publishing {
 	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
+    	mavenJava(MavenPublication) {
 			from components.java
+			artifact remapJar
 		}
 	}
 

@@ -1,3 +1,5 @@
+rootProject.name = "SIMPSCBG"
+
 pluginManagement {
 	repositories {
 		maven {
