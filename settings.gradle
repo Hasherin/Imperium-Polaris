@@ -1,5 +1,3 @@
-rootProject.name = "SIMPSCBG"
-
 pluginManagement {
 	repositories {
 		maven {
@@ -10,3 +8,5 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+
+rootProject.name = "Imperium Polaris"
