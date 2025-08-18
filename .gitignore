@@ -5,10 +5,6 @@ build/
 out/
 classes/
 
-# eclipse
-
-*.launch
-
 # idea
 
 .idea/
@@ -24,17 +20,15 @@ bin/
 .classpath
 .project
 
-# macos
-
-*.DS_Store
-
 # fabric
 
 run/
+neoforge/runs
+# macOS
 
-# java
+.DS_Store
+.AppleDouble
+.LSOverride
 
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
+# Kotlin compiler working directory
+.kotlin
